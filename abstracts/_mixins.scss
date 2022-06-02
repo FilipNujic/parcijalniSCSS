@@ -1,0 +1,19 @@
+@mixin keyframes($animation-name) {
+    @keyframes #{$animation-name} {
+        @content;
+    }
+}
+
+@mixin animation($str) {
+    animation: #{$str};
+}
+
+@include keyframes(animacija) {
+    0% {
+        transform: none;
+    }
+    100% {
+        transform: translateY(80vh);
+    }
+
+}
